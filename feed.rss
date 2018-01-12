@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+	<channel>
+		<title>LuxLBGTA</title>
+		<link>http://blog.noknok.pl/</link>
+		<description>Blog LuxLBGTA</description>
+		<copyright>2018</copyright>
+		<pubDate>Fri, 12 Jan 2018 12:26:29 GMT</pubDate>
+		<lastBuildDate>Fri, 12 Jan 2018 12:26:29 GMT</lastBuildDate>
+		<item>
+			<title>inter company event @ State Street</title>
+			<link>http://blog.noknok.pl/posts/inter%20company%20event%20State%20Street</link>
+			<description>&lt;p&gt;&lt;strong&gt;Inter company event @ State Street&lt;/strong&gt;&lt;/p&gt;</description>
+			<guid>http://blog.noknok.pl/posts/inter%20company%20event%20State%20Street</guid>
+			<pubDate>Tue, 09 Jan 2018 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;Inter company event &amp;#64; State Street&lt;/strong&gt;&lt;/p&gt;
+&lt;script src="https://www.universe.com/embed2.js" data-state=""&gt;&lt;/script&gt;
+&lt;style&gt; a.unii-listing-button { display: inline-block; margin-bottom: 0; text-align: center; vertical-align: middle; box-sizing: border-box; text-decoration: none; margin-bottom: 0; font-family: sans-serif; } a.unii-medium { padding: 11px 19px; font-size: 17.5px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; line-height: 20px; } a.unii-small { padding: 6px 10px; font-size: 13px; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; line-height: 16px; } a.unii-custom { cursor: pointer; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); color: #fff; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #3A66E5; background-repeat: repeat-x; border-color: rgb(233, 23, 93) rgb(233, 23, 93) rgb(255,24,102); border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); } a.Light { color: #FFF; } a.Light:hover { color: #FFF; } a.Dark { color: #000; } a.Dark:hover { color: #000; } &lt;/style&gt;
+&lt;a class="unii-listing-button unii-custom unii-medium Light" href="https://www.universe.com/events/inter-company-event-state-street-tickets-luxembourg-M2ZVTJ?buttonColor=#3A66E5&amp;buttonText=Get Tickets" style="backgroundColor: #3A66E5;"&gt;
+Get Tickets
+&lt;/a&gt;
+&lt;script
+  src="https://www.universe.com/embed2.js"
+  data-widget-type="universe-ticket"
+  data-target-type="Listing"
+  data-target-id="inter-company-event-state-street-tickets-luxembourg-M2ZVTJ"
+  data-state="buttonColor=#3A66E5&amp;buttonText=Get Tickets" &gt;
+&lt;/script&gt;
+&lt;script
+  src="https://www.universe.com/embed2.js"
+  data-widget-type="universe-listings"
+  data-target-type="user"
+  data-target-id="5a20576b3ba46a00320d5332"
+  data-state="buttonColor=#3A66E5&amp;buttonText=Get Tickets" &gt;
+&lt;/script&gt;
+&lt;script
+  src="https://www.universe.com/embed2.js"
+  data-widget-type="universe-calendar"
+  data-target-type="user"
+  data-target-id="5a20576b3ba46a00320d5332"
+  data-state="buttonColor=#3A66E5&amp;buttonText=Get Tickets" &gt;
+&lt;/script&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Another previous event @ Somewhere</title>
+			<link>http://blog.noknok.pl/posts/another%20previous%20event</link>
+			<description>&lt;p&gt;&lt;strong&gt;Another previous event @ Somewhere&lt;/strong&gt;&lt;/p&gt;</description>
+			<guid>http://blog.noknok.pl/posts/another%20previous%20event</guid>
+			<pubDate>Fri, 09 Jun 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;Another previous event &amp;#64; Somewhere&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Details to go here&lt;/p&gt;
+</content:encoded>
+		</item>
+		<item>
+			<title>Pprevious event @ Somewhere</title>
+			<link>http://blog.noknok.pl/posts/previous%20event%20somewhere</link>
+			<description>&lt;p&gt;&lt;strong&gt;Previous event @ Somewhere&lt;/strong&gt;&lt;/p&gt;</description>
+			<guid>http://blog.noknok.pl/posts/previous%20event%20somewhere</guid>
+			<pubDate>Mon, 09 Jan 2017 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;&lt;strong&gt;Previous event &amp;#64; Somewhere&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Details to go here&lt;/p&gt;
+</content:encoded>
+		</item>
+	</channel>
+</rss>
