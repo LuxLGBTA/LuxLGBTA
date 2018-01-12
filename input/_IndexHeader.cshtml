@@ -1,0 +1,41 @@
+<div class="site-heading">
+    @if(Context.String(BlogKeys.Description) != null)
+    {
+        <h1>@Context.String(BlogKeys.Description)</h1>
+    }
+    @if(Context.String(BlogKeys.Intro) != null)
+    {            
+        @if(Context.String(BlogKeys.Description) != null)
+        {
+            <hr class="small">
+        }
+        <span class="subheading">@Context.String(BlogKeys.Intro)</span>
+    }
+    <div id="countdownWrapper">
+    <div class="countdownContainer">
+        <h5>Countdown to our <a href="/posts/inter%20company%20event%20State%20Street">next event</a></h5>
+        <div id="clockdiv">
+            <div class="clock-wrapper"><span class="days"> </span>
+                <div class="smalltext">
+                    <p>Days </p>
+                </div>
+            </div>
+            <div class="clock-wrapper"><span class="hours"> </span>
+                <div class="smalltext">
+                    <p>Hours </p>
+                </div>
+            </div>
+            <div class="clock-wrapper"><span class="minutes"> </span>
+                <div class="smalltext">
+                    <p>Minutes </p>
+                </div>
+            </div>
+            <div class="clock-wrapper"><span class="seconds"> </span>
+                <div class="smalltext">
+                    <p>Seconds </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

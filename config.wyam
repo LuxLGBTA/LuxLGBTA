@@ -1,66 +1,11 @@
 Settings[Keys.Host] = "blog.noknok.pl";
-Settings[BlogKeys.Description] = "Blog noknok.pl";
-Settings[BlogKeys.Intro] = "Witaj na naszym blogu!";
-Settings[BlogKeys.Title] = "NokNok";
-Settings[BlogKeys.Image] = "/assets/images/background.png";
+Settings[BlogKeys.Description] = "Blog LuxLBGTA";
+Settings[BlogKeys.Intro] = "Welcome to our blog!";
+Settings[BlogKeys.Title] = "LuxLBGTA";
+//Settings[BlogKeys.Image] = "/assets/images/background.png";
 
 #n -p Wyam.Markdown
 #n -p Wyam.Yaml
 
 #theme CleanBlog
 #recipe Blog
-
-//Pipelines["Tags"].Clear();
-//Pipelines["Tags"].Add(
-//    ReadFiles("**/*.md"),
-//    WriteFiles(string.Format("tags/{0}.html", "test"))
-//);
-
-Pipelines[Blog.Tags].InsertAfter("Populate",
-    new Meta(Keys.RelativeFilePath, (doc, ctx) => GetValidFilePath(doc.FilePath(Keys.RelativeFilePath))));
-
-public FilePath GetValidFilePath(FilePath filePath)
-{
-    string dir = filePath.Directory.ToString();
-    filePath = new FilePath(filePath.FullPath.ToLower().Replace("ą","a").Replace("ć","c").Replace("ę","e").Replace("ł","l").Replace("ń","n").Replace("ó","o").Replace("ś","s").Replace("ź","z").Replace("ż","z"));// "test" + filePath.FileName;
-     // Do whatever you need to the FilePath object here
-     return filePath;
-}
-
-Pipelines[Blog.BlogPosts].InsertAfter("RelativeFilePath",
-    new Meta(Keys.RelativeFilePath, (doc, ctx) => GetValidFilePath(doc.FilePath(Keys.RelativeFilePath))));
-
-    Pipelines.InsertBefore(Blog.BlogArchive,
-    (IPipeline)new Wyam.Web.Pipelines.Archive(
-        "RevisedBlogArchive", // You can name the new pipeline whatever you want
-        new Wyam.Web.Pipelines.ArchiveSettings
-        {
-            Pipelines = new string[] { Blog.BlogPosts },
-            TemplateFile = ctx => "_Archive.cshtml",
-            Layout = "/_Layout.cshtml",
-            PageSize = ctx => ctx.Get(BlogKeys.ArchivePageSize, int.MaxValue),
-            Title = (doc, ctx) => "Archive",
-            RelativePath = (doc, ctx) => $"{ctx.DirectoryPath(BlogKeys.PostsPath).FullPath}"
-        }));
-Pipelines.Remove(Blog.BlogArchive);
-
-var Guides = new Pages(
-  "Guides",
-  new PagesSettings
-  {
-      PagesPattern = ctx => "guides",
-      MarkdownConfiguration = ctx => ctx.String(BlogKeys.MarkdownConfiguration),
-      MarkdownExtensionTypes = ctx => ctx.List<Type>(BlogKeys.MarkdownExtensionTypes),
-      ProcessIncludes = (doc, ctx) => doc.Bool(BlogKeys.ProcessIncludes)
-  });
-
-var RenderEvents = new RenderPages(
-  "RenderEvents",
-  new RenderPagesSettings
-  {
-      Pipelines = new string[] { Guides },
-      Layout = (doc, ctx) => "/_PostLayout.cshtml"
-  });
-
-Pipelines.InsertAfter("Pages", "Guides", Guides);
-Pipelines.InsertAfter("RenderPages", "RenderEvents", RenderEvents);
