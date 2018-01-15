@@ -1,7 +1,7 @@
 Settings[Keys.Host] = "blog.noknok.pl";
-Settings[BlogKeys.Description] = "Blog LuxLBGTA";
-Settings[BlogKeys.Intro] = "Welcome to our blog!";
-Settings[BlogKeys.Title] = "LuxLBGTA";
+Settings[BlogKeys.Description] = "Name TBC Lux LGBTA";
+Settings[BlogKeys.Intro] = "engagement, education and awareness, empowerment";
+Settings[BlogKeys.Title] = "LuxLGBTA";
 //Settings[BlogKeys.Image] = "/assets/images/background.png";
 
 #n -p Wyam.Markdown
