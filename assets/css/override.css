@@ -1,3 +1,4 @@
+/* flag */
 .flag {
     background: -webkit-gradient(linear, left top, left bottom, from(#e74c3c), color-stop(14.285714285714285%, #e74c3c), color-stop(14.285714285714285%, #e67e22), color-stop(28.57142857142857%, #e67e22), color-stop(28.57142857142857%, #f1c40f), color-stop(42.857142857142854%, #f1c40f), color-stop(42.857142857142854%, #2ecc71), color-stop(57.14285714285714%, #2ecc71), color-stop(57.14285714285714%, #3498db), color-stop(71.42857142857143%, #3498db), color-stop(71.42857142857143%, #2980b9), color-stop(85.71428571428571%, #2980b9), color-stop(85.71428571428571%, #9b59b6), to(#9b59b6));
     background: linear-gradient(180deg, #e74c3c 0%, #e74c3c 14.285714285714285%, #e67e22 14.285714285714285%, #e67e22 28.57142857142857%, #f1c40f 28.57142857142857%, #f1c40f 42.857142857142854%, #2ecc71 42.857142857142854%, #2ecc71 57.14285714285714%, #3498db 57.14285714285714%, #3498db 71.42857142857143%, #2980b9 71.42857142857143%, #2980b9 85.71428571428571%, #9b59b6 85.71428571428571%, #9b59b6 100%);
@@ -16,6 +17,8 @@
         padding: 100px 0;
     }
 }
+
+/* Countdown */
 
 #countdownWrapper {
     margin-top: 50px;
@@ -53,9 +56,36 @@
     font-size: 16px;
 }
 
+.clock-wrapper p {
+    padding-bottom: 10px;
+    margin: 5px;
+}
+
 @media (max-width:767px) {
     .clock-wrapper {
         padding-bottom: 10px;
         margin-top: 10px;
     }
 }
+
+
+/* Share Buttons */
+ul.share-buttons{
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.share-buttons li{
+    display: inline;
+  }
+  
+  ul.share-buttons .sr-only {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
