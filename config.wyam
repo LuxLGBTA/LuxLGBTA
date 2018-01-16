@@ -9,3 +9,11 @@ Settings[BlogKeys.Title] = "LuxLGBTA";
 
 #theme CleanBlog
 #recipe Blog
+
+
+Pipelines.Add("RenderEventIndex",
+    ReadFiles("_EventsArchive.cshtml"),
+    FrontMatter(Yaml()),
+    Razor().IgnorePrefix(null).WithLayout("/_Layout.cshtml"),
+    WriteFiles((doc, ctx) => "events/index.html")
+);
