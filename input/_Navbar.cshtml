@@ -18,7 +18,7 @@
     }
         if(Documents[Blog.BlogPosts].Any() && Context.Bool(BlogKeys.GenerateArchive))
     {
-        pages.Insert(0, Tuple.Create("Events", Context.GetLink(Context.String(BlogKeys.PostsPath) + "/index.html")));
+        pages.Insert(0, Tuple.Create("Events", Context.GetLink("events/index.html")));
     }
     foreach(Tuple<string, string> page in pages)
     {
