@@ -17,3 +17,10 @@ Pipelines.Add("RenderEventIndex",
     Razor().IgnorePrefix(null).WithLayout("/_Layout.cshtml"),
     WriteFiles((doc, ctx) => "events/index.html")
 );
+
+Pipelines.Add("RenderAboutUs",
+    ReadFiles("_AboutUs.cshtml"),
+    FrontMatter(Yaml()),
+    Razor().IgnorePrefix(null).WithLayout("/_Layout.cshtml"),
+    WriteFiles((doc, ctx) => "aboutus.html")
+);
