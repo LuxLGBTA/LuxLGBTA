@@ -53,7 +53,7 @@
     <div class="col-sm-6 right-border">
         @{
             bool firstEvent = true;
-            foreach(IDocument post in Documents.FromPipeline(Blog.Pages)
+            foreach(IDocument post in Documents.FromPipeline("Events")
 			.OrderByDescending(x => x.String("Published"))
 			.ToList())
             {                
@@ -147,3 +147,13 @@
         @Html.Partial("_Sidebar")
     </div> 
 </div>
+<aside id="section-clients" class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3"><a href="#"> <img class="img-fluid" src="/assets/images/BBH-290x155.jpg" /></a></div>
+            <div class="col-sm-6 col-md-3"><a href="#"> <img class="img-fluid" src="/assets/images/pwc-logo-150x150.jpg" /></a></div>
+            <div class="col-sm-6 col-md-3"><a href="#"> <img class="img-fluid" src="/assets/images/jpmorgan-vector-logo_0.png" /></a></div>
+            <div class="col-sm-6 col-md-3"><a href="#"> <img class="img-fluid" src="/assets/images/linklaters.png" /></a></div>
+        </div>
+    </div>
+</aside>

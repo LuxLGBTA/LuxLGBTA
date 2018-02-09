@@ -1,8 +1,9 @@
-Settings[Keys.Host] = "blog.noknok.pl";
-Settings[BlogKeys.Description] = "Name TBC Lux LGBTA";
+Settings[Keys.Host] = "LuxLGBTA.eu";
+Settings[BlogKeys.Description] = "Luxembourg Professional LGBT & Allies";
 Settings[BlogKeys.Intro] = "engagement, education and awareness, empowerment";
-Settings[BlogKeys.Title] = "LuxLGBTA";
+Settings[BlogKeys.Title] = "Luxembourg Professional LGBT & Allies";
 //Settings[BlogKeys.Image] = "/assets/images/background.png";
+Settings[BlogKeys.IgnoreFolders] = "events";
 
 #n -p Wyam.Markdown
 #n -p Wyam.Yaml
@@ -10,17 +11,30 @@ Settings[BlogKeys.Title] = "LuxLGBTA";
 #theme CleanBlog
 #recipe Blog
 
+var Events = new Wyam.Web.Pipelines.Pages(
+  "Events",
+  new Wyam.Web.Pipelines.PagesSettings
+  {
+      PagesPattern = ctx => "events",
+      MarkdownConfiguration = ctx => ctx.String(BlogKeys.MarkdownConfiguration),
+      MarkdownExtensionTypes = ctx => ctx.List<Type>(BlogKeys.MarkdownExtensionTypes),
+      ProcessIncludes = (doc, ctx) => doc.Bool(BlogKeys.ProcessIncludes)
+  });
+
+var RenderEvents = new Wyam.Web.Pipelines.RenderPages(
+  "RenderEvents",
+  new Wyam.Web.Pipelines.RenderPagesSettings
+  {
+      Pipelines = new string[] { Events },
+      Layout = (doc, ctx) => "/_Layout.cshtml"
+  });
+
+Pipelines.InsertAfter("Pages", "Events", Events);
+Pipelines.InsertAfter("RenderPages", "RenderEvents", RenderEvents);
 
 Pipelines.Add("RenderEventIndex",
     ReadFiles("_EventsArchive.cshtml"),
     FrontMatter(Yaml()),
     Razor().IgnorePrefix(null).WithLayout("/_Layout.cshtml"),
     WriteFiles((doc, ctx) => "events/index.html")
-);
-
-Pipelines.Add("RenderAboutUs",
-    ReadFiles("_AboutUs.cshtml"),
-    FrontMatter(Yaml()),
-    Razor().IgnorePrefix(null).WithLayout("/_Layout.cshtml"),
-    WriteFiles((doc, ctx) => "aboutus.html")
 );

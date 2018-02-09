@@ -5,7 +5,7 @@ Title: Events Archive
 }
 
 @{
-    foreach(IGrouping<int, IDocument> group in Documents.FromPipeline(Blog.Pages)
+    foreach(IGrouping<int, IDocument> group in Documents.FromPipeline("Events")
         .Where(x => x.ContainsKey(BlogKeys.Published))
         .OrderByDescending(x => x.Get<DateTime>(BlogKeys.Published))
         .GroupBy(x => x.Get<DateTime>(BlogKeys.Published).Year)
