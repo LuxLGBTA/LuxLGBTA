@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<link rel="self" href="http://blog.noknok.pl/" />
-	<id>http://blog.noknok.pl/</id>
-	<title>LuxLGBTA</title>
+	<link rel="self" href="http://luxlgbta.eu/" />
+	<id>http://luxlgbta.eu/</id>
+	<title>Luxembourg Professional LGBT &amp; Allies</title>
 	<rights>2018</rights>
-	<updated>2018-01-17T07:38:13Z</updated>
-	<subtitle>Name TBC Lux LGBTA</subtitle>
+	<updated>2018-02-09T06:30:43Z</updated>
+	<subtitle>Luxembourg Professional LGBT &amp; Allies</subtitle>
 	<entry>
-		<link href="http://blog.noknok.pl/posts/a%20blog%20post%20by%20BBH" />
-		<id>http://blog.noknok.pl/posts/a%20blog%20post%20by%20BBH</id>
+		<link href="http://luxlgbta.eu/posts/a%20blog%20post%20by%20BBH" />
+		<id>http://luxlgbta.eu/posts/a%20blog%20post%20by%20BBH</id>
 		<title>A Blog Post By Caitriona Flynn</title>
 		<updated>2018-01-09T00:00:00Z</updated>
 		<content>&lt;p&gt;&lt;strong&gt;First Blog&lt;/strong&gt;&lt;/p&gt;
