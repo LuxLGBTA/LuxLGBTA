@@ -1,4 +1,4 @@
-Title: Pprevious event @ Somewhere
+Title: Previous event @ Somewhere
 Published: 2017-01-09
 Tags: 
   - test event
