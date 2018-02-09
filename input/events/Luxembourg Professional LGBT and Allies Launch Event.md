@@ -11,9 +11,13 @@ Tags:
 
 ## Agenda
 9 - 9:30am Registration and Breakfast
+
 9:30 - 10am intro - Welcome by sponsor
+
 10 -11:30am panel discussion
+
 11:30 - 12:15pm -
+
 12:15-12:30 wrapup
 
 <script
