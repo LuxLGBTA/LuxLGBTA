@@ -1,3 +1,53 @@
 <script src="@Context.GetLink("/assets/js/countdown.js")"></script>
-  <!-- include the widget -->
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- include the widget -->
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  var netlifyWidgetMenuLinks = document.getElementsByClassName("netlifyIdentityLink");
+
+  for (var i=0; i < netlifyWidgetMenuLinks.length; i++) {
+    netlifyWidgetMenuLinks[i].onclick = function(){
+      console.log('checking user');
+      if(window.netlifyIdentity.currentUser() === null){
+        netlifyIdentity.open(); // open the modal
+      }
+      else{
+        netlifyIdentity.logout();
+        setLinksAfterLogout(netlifyWidgetMenuLinks);
+      }
+    }
+};
+});
+
+  
+
+function setLinksAfterLogout(netlifyWidgetMenuLinks)
+{
+for (var i=0; i < netlifyWidgetMenuLinks.length; i++) {
+  netlifyWidgetMenuLinks[i].innerText = 'LOGIN';
+  }
+}
+
+function setLinksAfterLogin(netlifyWidgetMenuLinks)
+{
+for (var i=0; i < netlifyWidgetMenuLinks.length; i++) {
+  netlifyWidgetMenuLinks[i].innerText = 'LOGOUT';
+  }
+}
+
+if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      console.log('in init checking user');
+      if (!user) {
+        setLinksAfterLogout(document.getElementsByClassName("netlifyIdentityLink"));
+        window.netlifyIdentity.on("login", () => {
+          setLinksAfterLogin(document.getElementsByClassName("netlifyIdentityLink"));
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+window.netlifyIdentity.on("login", user => console.log(user));
+window.netlifyIdentity.on("logout", () => console.log("Logged out"));
+</script>
