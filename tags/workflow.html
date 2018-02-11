@@ -72,7 +72,8 @@
                                 <!-- Collect the nav links, forms, and other content for toggling -->
                                 <div class="collapse navbar-collapse" id="navbar-collapse">
                                         <ul class="nav navbar-nav navbar-right">
-                                                        <li><a href="/events">Events</a></li>
+                                                <li class="netlifyIdentityMenu"><a href="#" class="netlifyIdentityLink">Login</a></li>
+        <li><a href="/events">Events</a></li>
         <li><a href="/posts">Archive</a></li>
         <li><a href="/tags">Tags</a></li>
         <li><a href="/aboutus">About Us</a></li>
@@ -173,8 +174,58 @@
                 </footer> 
 
                 <script src="/assets/js/countdown.js"></script>
-  <!-- include the widget -->
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<!-- include the widget -->
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  var netlifyWidgetMenuLinks = document.getElementsByClassName("netlifyIdentityLink");
+
+  for (var i=0; i < netlifyWidgetMenuLinks.length; i++) {
+    netlifyWidgetMenuLinks[i].onclick = function(){
+      console.log('checking user');
+      if(window.netlifyIdentity.currentUser() === null){
+        netlifyIdentity.open(); // open the modal
+      }
+      else{
+        netlifyIdentity.logout();
+        setLinksAfterLogout(netlifyWidgetMenuLinks);
+      }
+    }
+};
+});
+
+  
+
+function setLinksAfterLogout(netlifyWidgetMenuLinks)
+{
+for (var i=0; i < netlifyWidgetMenuLinks.length; i++) {
+  netlifyWidgetMenuLinks[i].innerText = 'LOGIN';
+  }
+}
+
+function setLinksAfterLogin(netlifyWidgetMenuLinks)
+{
+for (var i=0; i < netlifyWidgetMenuLinks.length; i++) {
+  netlifyWidgetMenuLinks[i].innerText = 'LOGOUT';
+  }
+}
+
+if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      console.log('in init checking user');
+      if (!user) {
+        setLinksAfterLogout(document.getElementsByClassName("netlifyIdentityLink"));
+        window.netlifyIdentity.on("login", () => {
+          setLinksAfterLogin(document.getElementsByClassName("netlifyIdentityLink"));
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+window.netlifyIdentity.on("login", user => console.log(user));
+window.netlifyIdentity.on("logout", () => console.log("Logged out"));
+</script>
                 <script>hljs.initHighlightingOnLoad();</script>
 
                 <script>
