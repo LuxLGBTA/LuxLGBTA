@@ -1,4 +1,3 @@
----
 Title: A Blog Post By Caitriona Flynn
 Published: 2018-01-09
 Tags: 
