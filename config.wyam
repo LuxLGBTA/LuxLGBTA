@@ -1,7 +1,7 @@
-Settings[Keys.Host] = "LuxLGBTA.eu";
-Settings[BlogKeys.Description] = "Luxembourg Professional LGBT & Allies";
+Settings[Keys.Host] = "LuxLGBTA.lu";
+Settings[BlogKeys.Description] = "Luxembourg Professional LGBT+ & Allies";
 Settings[BlogKeys.Intro] = "engagement, education and awareness, empowerment";
-Settings[BlogKeys.Title] = "Luxembourg Professional LGBT & Allies";
+Settings[BlogKeys.Title] = "Luxembourg Professional LGBT+ & Allies";
 //Settings[BlogKeys.Image] = "/assets/images/background.png";
 Settings[BlogKeys.IgnoreFolders] = "events";
 
