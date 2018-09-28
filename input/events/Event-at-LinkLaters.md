@@ -5,6 +5,6 @@ Tags:
 
 ---
 
-**Previous event @ Somewhere**
+**Previous event @ LinkLaters**
 
 Details to go here

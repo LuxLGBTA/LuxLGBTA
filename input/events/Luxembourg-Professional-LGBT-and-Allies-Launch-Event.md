@@ -1,5 +1,5 @@
 ---
-Title: Luxembourg Professional LGBT & Allies Launch Event
+Title: Luxembourg Professional LGBT+ & Allies Launch Event
 Published: 2018-01-09
 Tags: 
   - Launch
