@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<link rel="self" href="http://luxlgbta.lu/" />
 	<id>http://luxlgbta.lu/</id>
-	<title>Luxembourg Professional LGBT+ &amp; Allies</title>
-	<rights>2018</rights>
-	<updated>2018-09-28T19:11:00Z</updated>
-	<subtitle>Luxembourg Professional LGBT+ &amp; Allies</subtitle>
+	<title>Luxembourg Professional LGBT+ Allies</title>
+	<link rel="self" href="http://luxlgbta.lu/" />
+	<rights>2019</rights>
+	<updated>2019-01-30T20:51:54Z</updated>
+	<subtitle>Luxembourg Professional LGBT+ Allies</subtitle>
 	<entry>
-		<link href="http://luxlgbta.lu/posts/Luxembourg-Professional-LGBT+-&amp;-Allies-Website-Coming-Soon" />
 		<id>http://luxlgbta.lu/posts/Luxembourg-Professional-LGBT+-&amp;-Allies-Website-Coming-Soon</id>
 		<title>Luxembourg Professional LGBT+ &amp; Allies Website Coming Soon</title>
+		<link href="http://luxlgbta.lu/posts/Luxembourg-Professional-LGBT+-&amp;-Allies-Website-Coming-Soon" />
 		<updated>2018-09-27T00:00:00Z</updated>
 		<content>&lt;p&gt;&lt;strong&gt;Coming Soon&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Details to go here&lt;/p&gt;
@@ -17,12 +17,12 @@
 		<summary>&lt;p&gt;&lt;strong&gt;Coming Soon&lt;/strong&gt;&lt;/p&gt;</summary>
 	</entry>
 	<entry>
+		<id>http://luxlgbta.lu/posts/2018-02-10-test</id>
+		<title>Test NetlifyCMS with workflow</title>
 		<author>
 			<name>Mark Burton</name>
 		</author>
 		<link href="http://luxlgbta.lu/posts/2018-02-10-test" />
-		<id>http://luxlgbta.lu/posts/2018-02-10-test</id>
-		<title>Test NetlifyCMS with workflow</title>
 		<updated>2018-02-10T08:54:11Z</updated>
 		<content>&lt;p&gt;&lt;strong&gt;NetlifyCMS&lt;/strong&gt;&lt;br /&gt;
 Test the NetlifyCMS with workflow.&lt;/p&gt;
